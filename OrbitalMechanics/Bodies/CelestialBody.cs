@@ -55,6 +55,8 @@ public sealed class CelestialBody
     public GravitationalParameter GravitationalParameter => GravitationalParameter.Create( Mass );
     public Acceleration SurfaceGravity => GravitationalParameter / Radius / Radius;
     public Velocity EscapeVelocity => (SurfaceGravity * Radius * 2).Sqrt();
+    public Distance EquatorialCircumference => Radius * Math.Tau;
+    public Area SurfaceArea => Radius * Radius * (Math.Tau * 2);
 
     public IReadOnlyDictionary<string, CelestialBody> Children => _children;
 
@@ -84,7 +86,7 @@ public sealed class CelestialBody
         Angle argumentOfPeriapsis = default,
         Angle longitudeOfAscendingNode = default,
         Distance atmosphereHeight = default,
-        Angle? meanAnomalyAtEpoch = null)
+        Angle meanAnomalyAtEpoch = default)
     {
         var child = new CelestialBody(
             name,

@@ -10,4 +10,4 @@ public record struct OrbitInfo(
     Angle Inclination = default,
     Angle ArgumentOfPeriapsis = default,
     Angle LongitudeOfAscendingNode = default,
-    Angle? MeanAnomalyAtEpoch = null);
+    Angle MeanAnomalyAtEpoch = default);

@@ -193,7 +193,7 @@ public abstract class Orbit
                 info.Inclination,
                 info.ArgumentOfPeriapsis,
                 info.LongitudeOfAscendingNode,
-                info.MeanAnomalyAtEpoch ?? Angle.Half );
+                info.MeanAnomalyAtEpoch );
 
         if ( info.Eccentricity.IsHyperbolic )
             return new HyperbolicOrbit(
@@ -203,7 +203,7 @@ public abstract class Orbit
                 info.Inclination,
                 info.ArgumentOfPeriapsis,
                 info.LongitudeOfAscendingNode,
-                info.MeanAnomalyAtEpoch ?? Angle.Half );
+                info.MeanAnomalyAtEpoch );
 
         throw new ArgumentException( "Parabolic orbits are unsupported.", nameof( info ) );
     }
