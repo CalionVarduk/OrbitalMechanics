@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <Authors>Łukasz Furlepa</Authors>
+        <Copyright>MIT</Copyright>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\KSP\KSP.csproj" />
+      <ProjectReference Include="..\OrbitalMechanics\OrbitalMechanics.csproj" />
+    </ItemGroup>
+
+</Project>
